@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [App\Http\Controllers\HuisdierController::class, 'index']);
+Route::get('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'index']);
+
+Route::get('/huisdieren/{id}', [App\Http\Controllers\HuisdierController::class, 'show']);
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
