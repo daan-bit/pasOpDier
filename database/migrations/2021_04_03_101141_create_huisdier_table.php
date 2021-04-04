@@ -17,12 +17,12 @@ class CreateHuisdierTable extends Migration
             $table->id();
             $table->string('naam');
             $table->string('soort')->default('Onbekend');
-            $table->string('image')->default('/img/default_huisdier.jpg');
+            $table->string('image')->default('/img/overig.jpg');
             $table->string('wanneer');
             $table->float('uurtarief');
             $table->integer('hoelang');
-            $table->string('eigenaarEmail')->unique();
-            $table->foreign("eigenaarEmail")->references("email")->on("users");
+            $table->unsignedBigInteger('user_id');
+            $table->foreign("user_id")->references("id")->on("users");
             $table->string('beschrijving');
         });
     }
@@ -34,8 +34,8 @@ class CreateHuisdierTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('users_eigenaarEmail_foreign');
+        Schema::table('huisdier', function (Blueprint $table) {
+            $table->dropForeign('huisdier_user_id_foreign');
         });
         Schema::dropIfExists('huisdier');
     }
