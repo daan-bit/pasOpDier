@@ -14,8 +14,8 @@ class HuisdierController extends Controller
     }
 
     public function show($id){   
-
         return view('huisdier.show',[
+            'eigenaar' => \App\Models\Huisdier::find($id)->huisdierEigenaar,
             'huisdier' => \App\Models\Huisdier::find($id),
         ]);        
     }

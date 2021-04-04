@@ -13,4 +13,8 @@ class Huisdier extends Model
 
     public $timestamps = false;
 
+    public function huisdierEigenaar() {
+        return $this->belongsTo(\App\Models\User::class, 'user_id');
+    }
+
 }

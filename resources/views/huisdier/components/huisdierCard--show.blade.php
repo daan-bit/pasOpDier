@@ -5,12 +5,10 @@
      <section class="huisdierCard__text">
           <p>Hoi, ik ben <b>{{$huisdier->naam}}</b> en ik ben een {{$huisdier->soort}}.</p>
           <p>Mijn baasje zoekt een oppas op <b>{{$huisdier->wanneer}}</b> voor een duur van <b>{{$huisdier->hoelang}}</b> dagen en hij/zij betaald zelfs <b>{{$huisdier->uurtarief}}</b> euro per uur!</p>
-          <br><p>Mocht je vragen hebben, neem contact op: <b>{{$huisdier->eigenaarEmail}}</b></p>
+          <br><p>Mocht je vragen hebben, neem contact op: <b>{{$eigenaar->email}}</b></p>
 
           <h2 class="huisdierCard__subtitel">Beschrijving</h2>
           <p class="huisdierCard__eigenschap huisdierCard__eigenschap--beschrijving">{{$huisdier->beschrijving}}</p>
-
-
      </section>
 
     <section class="huisdierCard__btnSection">
