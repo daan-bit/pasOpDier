@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddStatusToHuisdierTable extends Migration
+class AddBerichtToOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddStatusToHuisdierTable extends Migration
      */
     public function up()
     {
-        Schema::table('huisdier', function (Blueprint $table) {
-            $table->string('status')->default('open');
+        Schema::table('orders', function (Blueprint $table) {
+            $table ->string('bericht')->default("Geen bericht beschikbaar");
         });
     }
 
@@ -25,7 +25,8 @@ class AddStatusToHuisdierTable extends Migration
      */
     public function down()
     {
-        Schema::table('huisdier', function (Blueprint $table) {
+        Schema::table('orders', function (Blueprint $table) {
+            //
         });
     }
 }

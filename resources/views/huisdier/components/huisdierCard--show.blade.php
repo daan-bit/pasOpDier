@@ -12,7 +12,7 @@
      </section>
 
     <section class="huisdierCard__btnSection">
-         <button class="huisdierCard__button">Ik wil oppassen</button>
+          <a href="/orders/{{$huisdier->id}}/create"><button class="huisdierCard__button"></button></a>
          <a class="huisdierCard__back_to_home" href="/huisdieren">Terug naar de anderen</a>
     </section>
 </article>

@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             SoortTableSeeder::class,
             ImagesTableSeeder::class,
             HuisdierTableSeeder::class,
+            OrdersTableSeeder::class,
+            ReviewsTableSeeder::class,
         ]);
     }
 }

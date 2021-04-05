@@ -16,5 +16,4 @@ class Huisdier extends Model
     public function huisdierEigenaar() {
         return $this->belongsTo(\App\Models\User::class, 'user_id');
     }
-
 }

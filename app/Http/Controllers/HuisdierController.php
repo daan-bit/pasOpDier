@@ -7,9 +7,9 @@ use Auth;
 class HuisdierController extends Controller
 {
     public function index(){
-        $beschikbaarHuisdier = \App\Models\Huisdier::all()->where('status', '=', 'open');
+        
         return view('huisdier.index', [
-            'huisdier' => $beschikbaarHuisdier,        
+            'huisdier' => \App\Models\Huisdier::all(),        
         ]);
     }
 
@@ -42,7 +42,7 @@ class HuisdierController extends Controller
             $huisdier->save();
             return redirect('/');
         }catch(Exception $e){
-            return redirect('/create');
+            return redirect('/huisdieren/create');
         }
     }
 }

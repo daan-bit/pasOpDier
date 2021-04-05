@@ -25,15 +25,14 @@ class HuisdierTableSeeder extends Seeder
         ]);
 
         DB::table('huisdier')->insert([
-            'naam' => "Max",
-            'image' => "/img/hond.jpg",
-            'soort' => 'hond',
-            'wanneer' => "27 Septemeber",
-            'hoelang' => "3",
-            'uurtarief' => "10.00",
-            'user_id' => "1",
-            'beschrijving' => "Max is een lieve hond met een goed karakter. Je zal geen last van hem hebben",
-            'status' => 'open',
+            'naam' => "Tessa",
+            'image' => "/img/kat.jpg",
+            'soort' => 'kat',
+            'wanneer' => "3 februari",
+            'hoelang' => "7",
+            'uurtarief' => "15.00",
+            'user_id' => "2",
+            'beschrijving' => "Tessa is een lieve kat en bijt alleen soms",
         ]);
     }
 }

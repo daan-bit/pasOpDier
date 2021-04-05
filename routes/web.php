@@ -13,19 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware(['auth'])->group(function(){
+    Route::get('/account', [App\Http\Controllers\AccountController::class, 'show']);
+
+    Route::get('huisdieren/create', [App\Http\Controllers\HuisdierController::class, 'create']);
+    Route::post('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'store']);
+
+    Route::get('/orders/{id}/create', [App\Http\Controllers\OrderController::class, 'create']);
+    Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']); 
+
+    Route::get('/reviews/{id}/create', [App\Http\Controllers\ReviewController::class, 'create']);
+    Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store']);
+});
 
 Route::get('/', [App\Http\Controllers\HuisdierController::class, 'index']);
 Route::get('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'index']);
 
 Route::get('/huisdieren/{id}', [App\Http\Controllers\HuisdierController::class, 'show']);
-
-
-Route::middleware(['auth'])->group(function(){
-    Route::get('/create', [App\Http\Controllers\HuisdierController::class, 'create']);
-    Route::post('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'store']);
-});
-
-
 
 
 Route::get('/dashboard', function () {

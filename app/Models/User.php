@@ -42,6 +42,6 @@ class User extends Authenticatable
     ];
 
     public function huisdieren() {
-        return $this->hasMany(\App\Models\Product::class);
+        return $this->hasMany(\App\Models\Huisdier::class);
     }
 }
