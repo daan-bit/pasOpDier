@@ -11,7 +11,7 @@
                 <p class="gridCard__text">Naam: {{$huisdier->naam}}</p>
                 <p class="gridCard__text">Soort: {{$huisdier->soort}}</p>
                 <p class="gridCard__text">Wanneer: {{$huisdier->wanneer}}</p>
-                <p class="gridCard__text">Duur: {{$huisdier->hoelang}}</p>   
+                <p class="gridCard__text">Duur: {{$huisdier->hoelang}} dagen</p>   
                  
                 <h2 class="gridCard__subtitel">Beschrijving</h2>
                 <p class="gridCard__text">{{$huisdier->beschrijving}}</p> 

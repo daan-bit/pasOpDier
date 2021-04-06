@@ -22,7 +22,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/orders/{id}/create', [App\Http\Controllers\OrderController::class, 'create']);
     Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']); 
 
-    Route::get('/reviews/{id}/create', [App\Http\Controllers\ReviewController::class, 'create']);
+    Route::get('/reviews/create', [App\Http\Controllers\ReviewController::class, 'create']);
     Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store']);
 
     Route::get('/profielen/{id}', [App\Http\Controllers\ProfielController::class, 'show']);

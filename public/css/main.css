@@ -16,12 +16,6 @@ body{
     height: 100vh;
 }
 
-main{
-    padding:2rem;
-    width: 100%;
-    height: 100%;
-}
-
 /* overzicht huisdieren */
 .nav{
     width: 100%;
@@ -78,20 +72,8 @@ main{
 .gridCard{
     grid-column: span 4;
     width: 100%;
-    height: 55rem;
+    height: 65rem;
     box-shadow: 0 0.5rem 2rem black;
-}
-
-@media(max-width: 56.25rem){
-    .gridCard{
-        grid-column: span 6;
-    }    
-}
-
-@media(max-width: 32.5rem){
-    .gridCard{
-        grid-column: span 12;
-    }    
 }
 
 .gridCard__a{
@@ -115,7 +97,7 @@ main{
 
 .gridCard__figure{
     width:100%;
-    height:40%;
+    height:45%;
 }
 
 .gridCard__image{
@@ -142,22 +124,70 @@ main{
     margin-top: 2rem;
 }
 
-/* style for kind-of-sushi
-.gridCard::after{
-    content:"";
-    width: 10%;
-    height: 10%;
-    background: #f67280;
-    position: absolute;
-    bottom:0;
-    right:0;
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
-} */
+@media(max-width: 56.25rem){
+    .gridCard{
+        grid-column: span 6;
+    } 
+    .gridCard__figure{
+        height:40%;
+    }   
+}
 
+@media(max-width: 37.5rem){
+    .gridCard{
+        height: 60rem
+    } 
+    .nav__pagina{
+        margin-top:1rem;
+    }    
+    .nav__button{
+        padding: 0.5rem 2rem;
+        font-size: 100%;
+    }    
+}
+
+@media(max-width: 32.5rem){
+    .gridCard{
+        grid-column: span 12;
+    }
+    .nav{
+        height: auto;
+    }    
+    .nav__wrapper{
+        width: 100%;
+        height: 100%;
+        padding-bottom:2rem;
+    }     
+    .nav__pagina{
+        display: block;
+    }    
+    .nav__pagina--create{
+        float: none;
+    }    
+    .nav__button{
+        width: 100%;
+        padding: 1rem 3rem;
+        font-size: 120%;
+    }
+    .filter-section{
+        width: 100%;
+        height: auto;
+        font-size: 140%;
+        margin: 1rem auto 1rem auto;
+        flex-wrap: wrap;
+    }    
+    .filter-section__wrapper{
+        margin:auto;
+        margin: 1.5rem;
+    }
+
+}
+
+/* show pagina */
 .huisdierCard{
     width: 55%;
     height:auto;
-    margin: 0 auto;  
+    margin: 2rem auto 2rem auto;  
     box-shadow: 0 0.2rem 0.5rem black;  
 }
 
@@ -167,15 +197,9 @@ main{
     }
 }
 
-@media(max-width:25rem){
-    .huisdierCard{
-        width:25rem;
-    }
-}
-
 .huisdierCard__figure{
     width: 100%;
-    height: 45rem;
+    height: 40rem;
 }
 
 .huisdierCard__image{
@@ -185,8 +209,17 @@ main{
 }
 
 .huisdierCard__text{
-    padding: 2rem 0 0 2rem;
+    padding: 2rem 1rem 0 2rem;
     color: #eeeeee;
+}
+
+@media(max-width:25rem){
+    .huisdierCard{
+        width:30rem;
+    }
+    .huisdierCard__text{
+        padding-right: 1rem;
+    }
 }
 
 .huisdierCard__subtitel{
@@ -203,22 +236,17 @@ main{
     width:25rem;
     height: 6rem;
     box-sizing: border-box;
-    background-color: #07689f;
-    border: none;
+    background-color: #118AB2;
+    border:none;
     color: #eeeeee;
-    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.7);
     transition: 0.2s all;
-}
-
-@media(max-width: 37.5rem){
-    .huisdierCard__button{
-        width: 15rem;
-    }
 }
 
 .huisdierCard__button:hover{
     cursor: pointer;
-    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.9);
+    background-color: #3cc1ec;
+    transition: 1s all;
+    color: black;
 }
 
 .huisdierCard__back_to_home{
@@ -227,8 +255,15 @@ main{
     color:#eeeeee;
 }
 
+@media(max-width: 37.5rem){
+    .huisdierCard__button{
+        width: 15rem;
+    }
+}
 
 
+
+/* create huisdier */
 .create-form{
     width: 40%;
     margin:0 auto;
@@ -294,6 +329,12 @@ main{
 
 .u-grid-gap-2{
     gap: 2rem;
+}
+
+.u-main{
+    padding:2rem;
+    width: 100%;
+    height: 100%;
 }
 
 

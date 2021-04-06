@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-    public function create($id){
+    public function create(){
         return view('review.create', [
             'eigenaar' => Auth::user(),
-            'huisdier' => \App\Models\Review::find($id)->infoHuisdier,
-            'order' => \App\Models\Review::find($id)->infoOrder,
+            'huisdier' => \App\Models\Huisdier::where('id', '=', Auth::user()->id)->first(),
+            'order' => \App\Models\Order::where('user_id', '=', Auth::user()->id)->first(),
             ]);
     }
 

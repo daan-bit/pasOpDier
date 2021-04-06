@@ -10,7 +10,7 @@
      </section>
 
     <section class="huisdierCard__btnSection">
-          <a href="/reviews/{{$huisdier->id}}/create"><button class="huisdierCard__button">Accepteren</button></a>
+          <a href="/reviews/create"><button class="huisdierCard__button">Accepteren</button></a>
           <button class="huisdierCard__button">Weigeren</button>
          <a class="huisdierCard__back_to_home" href="/huisdieren">Terug naar de anderen</a>
     </section>

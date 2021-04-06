@@ -1,6 +1,6 @@
 <article class="huisdierCard a-popup">
      <figure class="huisdierCard__figure">
-        <img class="huisdierCard__image" src="{{$huisdier->image}}"  alt="{{$huisdier->naam . ' ' . $huisdier->soort}}"/>
+     <img class="huisdierCard__image" src="{{$huisdier->image}}"  alt="{{$huisdier->naam . ' ' . $huisdier->soort}}"/>
      </figure>
      <section class="huisdierCard__text">
           <p>Hoi, ik ben <b>{{$huisdier->naam}}</b> en ik ben een {{$huisdier->soort}}.</p>
@@ -11,8 +11,8 @@
           <p class="huisdierCard__eigenschap huisdierCard__eigenschap--beschrijving">{{$huisdier->beschrijving}}</p>
      </section>
 
-    <section class="huisdierCard__btnSection">
-          <a href="/orders/{{$huisdier->id}}/create"><button class="huisdierCard__button"></button></a>
-         <a class="huisdierCard__back_to_home" href="/huisdieren">Terug naar de anderen</a>
-    </section>
+<section class="huisdierCard__btnSection">
+          <a href="/orders/{{$huisdier->id}}/create"><button class="huisdierCard__button">Ik wil oppassen</button></a>
+          <a class="huisdierCard__back_to_home" href="/huisdieren">Terug naar de anderen</a>
+</section>
 </article>
