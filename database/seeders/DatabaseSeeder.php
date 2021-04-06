@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             ImagesTableSeeder::class,
             HuisdierTableSeeder::class,
             OrdersTableSeeder::class,
-            ReviewsTableSeeder::class,
+            ReviewsTableSeeder::class,       
         ]);
     }
 }

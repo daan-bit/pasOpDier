@@ -11,11 +11,148 @@ html{
 
 body{
     font-size: 1.8rem;
-    padding: 2rem;
-    background-color: #222831;
-    font-family: sans-serif;
+    background-color: #073B4C;
+    font-family: 'Roboto', sans-serif;
     height: 100vh;
 }
+
+main{
+    padding:2rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* overzicht huisdieren */
+.nav{
+    width: 100%;
+    height: 7.5rem;
+    background-color: #073B4C;
+    border-bottom: 0.3rem solid #118AB2;
+}
+
+.nav__wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.nav__pagina{
+    display: inline-block;
+    margin: auto;
+}
+
+.nav__pagina--create{
+    float: right;
+}
+
+.nav__button{
+    padding: 1rem 3rem;
+    font-size: 120%;
+    height: 75%;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 0.2rem solid #118AB2;
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.nav__button:hover{
+    background-color: #3cc1ec;
+    transition: 1s all;
+    color: black;
+}
+
+.filter-section{
+    width: 100%;
+    height: 7.5rem;
+    display: flex;
+    color: #eeeeee;
+    font-size: 140%;
+    border-bottom: 0.3rem solid #118AB2;
+}
+
+.filter-section__wrapper{
+    margin:auto;
+}
+
+.gridCard{
+    grid-column: span 4;
+    width: 100%;
+    height: 55rem;
+    box-shadow: 0 0.5rem 2rem black;
+}
+
+@media(max-width: 56.25rem){
+    .gridCard{
+        grid-column: span 6;
+    }    
+}
+
+@media(max-width: 32.5rem){
+    .gridCard{
+        grid-column: span 12;
+    }    
+}
+
+.gridCard__a{
+    text-decoration: none;
+}
+
+.gridCard__article{
+    width: 100%;
+    height: 100%;
+}
+
+.gridCard__header{
+    width: 100%;
+    height: 10%;
+}
+
+.gridCard__heading{
+    margin: 2rem auto 0.5rem 2rem;   
+    color:#eeeeee;
+}
+
+.gridCard__figure{
+    width:100%;
+    height:40%;
+}
+
+.gridCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gridCard__textSection{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding:2rem;
+}
+
+.gridCard__text{
+    color: #eeeeee;
+    margin-left: 0;
+}
+
+.gridCard__subtitel{
+    color: #eeeeee;
+    margin-top: 2rem;
+}
+
+/* style for kind-of-sushi
+.gridCard::after{
+    content:"";
+    width: 10%;
+    height: 10%;
+    background: #f67280;
+    position: absolute;
+    bottom:0;
+    right:0;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+} */
 
 .huisdierCard{
     width: 55%;
@@ -90,104 +227,7 @@ body{
     color:#eeeeee;
 }
 
-.gridCard{
-    grid-column: span 4;
-    width: 100%;
-    height: 35rem;
-    box-shadow: 0 0.5rem 2rem black;
-    position: relative;
-}
 
-@media(max-width: 56.25rem){
-    .gridCard{
-        grid-column: span 6;
-    }    
-}
-
-@media(max-width: 32.5rem){
-    .gridCard{
-        grid-column: span 12;
-    }    
-}
-
-.gridCard > a{
-    text-decoration: none;
-}
-
-.gridCard > a > article{
-    width: 100%;
-    height: 100%;
-}
-
-/* needed voor drinks index */
-.gridCard > article{
-    width: 100%;
-    height: 100%;
-}
-
-
-.gridCard__header{
-    width: 100%;
-    height: 20%;
-}
-
-.gridCard__heading{
-    padding-left: 2rem;
-    color:#eeeeee;
-}
-
-.gridCard__figure{
-    width:100%;
-    height:60%;
-}
-
-.gridCard__image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gridCard__textSection{
-    width: 100%;
-    height: 20%;
-}
-
-.gridCard__text{
-    padding-left: 2rem;
-    color: #eeeeee;
-}
-
-/* style for kind-of-sushi */
-.gridCard::after{
-    content:"";
-    width: 10%;
-    height: 10%;
-    background: #f67280;
-    position: absolute;
-    bottom:0;
-    right:0;
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
-}
-
-.gridCard[data-kind-of-sushi="Maki"]::after{
-    background: #fed049;
-}
-
-.gridCard[data-kind-of-sushi="Nigiri"]::after{
-    background: #f6f7d7;
-}
-
-.gridCard[data-kind-of-sushi="Sashimi"]::after{
-    background: #ff5722;
-}
-
-.gridCard[data-kind-of-sushi="Temaki"]::after{
-    background: #f73859;
-}
-
-.gridCard[data-kind-of-sushi="Uramaki"]::after{
-    background: #0c056d;
-}
 
 .create-form{
     width: 40%;
@@ -235,16 +275,6 @@ body{
     margin-bottom: 2rem;
 }
 
-.filter-section{
-    width: 100%;
-    color: #eeeeee;
-    font-size: 160%;
-}
-
-.filter-section__wrapper{
-    margin-bottom: 2rem;
-}
-
 @media(max-width: 62.5rem){
     .create-form{
         width:90%;
@@ -266,10 +296,6 @@ body{
     gap: 2rem;
 }
 
-.u-flex-v-center{
-    display: flex;
-    align-items: center;
-}
 
 /* animations */
 .a-popup{

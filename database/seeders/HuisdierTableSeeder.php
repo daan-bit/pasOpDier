@@ -34,5 +34,38 @@ class HuisdierTableSeeder extends Seeder
             'user_id' => "2",
             'beschrijving' => "Tessa is een lieve kat en bijt alleen soms",
         ]);
+
+        DB::table('huisdier')->insert([
+            'naam' => "Arie",
+            'image' => "/img/vogel.jpg",
+            'soort' => 'vogel',
+            'wanneer' => "26 februari",
+            'hoelang' => "2",
+            'uurtarief' => "12.00",
+            'user_id' => "3",
+            'beschrijving' => "Arie is een goede vogel. Fluit soms, maar verder zul je geen last hebben. En oja! hij kan het volkslied",
+        ]);
+
+        DB::table('huisdier')->insert([
+            'naam' => "Jan-Pieter",
+            'image' => "/img/vis.jpg",
+            'soort' => 'vis',
+            'wanneer' => "3 maart",
+            'hoelang' => "1",
+            'uurtarief' => "7.00",
+            'user_id' => "4",
+            'beschrijving' => "Jan-Pieter blubt en blubt en verder doet hij eigenlijk niet veel",
+        ]);
+
+        DB::table('huisdier')->insert([
+            'naam' => "Youri",
+            'image' => "/img/overig.jpg",
+            'soort' => 'overig',
+            'wanneer' => "26 februari",
+            'hoelang' => "8",
+            'uurtarief' => "8.00",
+            'user_id' => "5",
+            'beschrijving' => "Youri is een konijn en snuft maar wat in het rond. Laat hem niet in je keuken kastje komen!!!",
+        ]);
     }
 }

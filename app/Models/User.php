@@ -44,4 +44,8 @@ class User extends Authenticatable
     public function huisdieren() {
         return $this->hasMany(\App\Models\Huisdier::class);
     }
+
+    public function profiel() {
+        return $this->hasOne(\App\Models\Profiel::class);
+    }
 }

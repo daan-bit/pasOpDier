@@ -24,6 +24,8 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/reviews/{id}/create', [App\Http\Controllers\ReviewController::class, 'create']);
     Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store']);
+
+    Route::get('/profielen/{id}', [App\Http\Controllers\ProfielController::class, 'show']);
 });
 
 Route::get('/', [App\Http\Controllers\HuisdierController::class, 'index']);
