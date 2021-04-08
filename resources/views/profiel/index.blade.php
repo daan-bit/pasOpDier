@@ -10,12 +10,11 @@
 
 
 @section('content')
-@include('huisdier.components.navigatie--index')
-@include('huisdier.components.checkbox--index')
+@include('profiel.components.navigatie--index')
 <main class="u-main">
   <ul class="u-grid-12 u-grid-gap-2">
-      @foreach($huisdier as $huisdier)
-        @include('huisdier.components.huisdierCard--index')
+      @foreach($profiel as $profiel)
+        @include('profiel.components.profielCard--index')
       @endforeach
   </ul>
 </main>

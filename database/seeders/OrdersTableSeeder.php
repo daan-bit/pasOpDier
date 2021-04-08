@@ -18,6 +18,7 @@ class OrdersTableSeeder extends Seeder
             'user_id' => '1',
             'huisdier_id' => '1',
             'oppasser_id' => '2',
+            'bericht' =>  'Hoi Daniël ik wil op je dier passen.'
         ]);
     }
 }

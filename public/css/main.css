@@ -257,18 +257,17 @@ body{
 
 @media(max-width: 37.5rem){
     .huisdierCard__button{
-        width: 15rem;
+        width: 17rem;
     }
 }
 
 
-
 /* create huisdier */
 .create-form{
-    width: 40%;
-    margin:0 auto;
+    width: 55%;
+    margin:2rem auto 2rem auto;
     box-shadow: 0 0.5rem 2rem black;
-    min-height: 70vh;
+    /* min-height: 70vh; */
     display: flex;
     color: #eeeeee;
 }
@@ -290,17 +289,31 @@ body{
     width: 80%;
     font-size: 100%;
     font-weight: 400;
-    font-family: sans-serif;
+    padding-left:0.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.create-form__input--soort{
+    width: 40%;
+}
+
+.create-form__input--number{
+    width: 30%;
+}
+
+.create-form__input--afbeelding{
+    width:60%;
 }
 
 .create-form__input--big{
-    height: 20rem;
+    height: 15rem;
 }
 
 .create-form__button{
-    font-size: 120%;
-    width:25rem;
-    height: 6rem;
+    font-size: 110%;
+    width:auto;
+    height: auto;
+    padding: 1rem;
     box-sizing: border-box;
     background-color: #07689f;
     border: none;
@@ -310,9 +323,30 @@ body{
     margin-bottom: 2rem;
 }
 
+.create-form__button:hover{
+    cursor: pointer;
+    background-color: #3cc1ec;
+    transition: 1s all;
+    color: black;
+}
+
 @media(max-width: 62.5rem){
     .create-form{
         width:90%;
+    }
+}
+
+@media(max-width: 32.25rem){
+    .create-form__input--soort{
+        width: 50%;
+    }
+    
+    .create-form__input--number{
+        width: 40%;
+    }
+    
+    .create-form__input--afbeelding{
+        width:80%;
     }
 }
 

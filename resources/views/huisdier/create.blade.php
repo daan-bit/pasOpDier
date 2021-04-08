@@ -10,13 +10,13 @@ Voeg huisdier toe
     <form class="create-form__form" action="/huisdieren" method="POST">
         @csrf
         <section class="create-form__section">
-            <label for="naam">Naam huisdier</label>
-            <input class="create-form__input" name="naam" id="naam" type="text" />
+            <label for="naam">Naam van uw huisdier</label>
+            <input class="create-form__input" name="naam" id="naam" type="text" required/>
         </section>
 
         <section class="create-form__section">
             <label for="soort">Soort</label>
-            <select class="create-form__input" id="soort" name="soort">
+            <select class="create-form__input create-form__input--soort" id="soort" name="soort">
                 @foreach($soorten as $soort)
                     <option value="{{$soort->soort}}">{{$soort->soort}}</option>
                 @endforeach
@@ -25,7 +25,7 @@ Voeg huisdier toe
 
         <section class="create-form__section">
             <label for="afbeelding">Afbeelding</label>
-            <select class="create-form__input" id="afbeelding" name="afbeelding">
+            <select class="create-form__input create-form__input--afbeelding" id="afbeelding" name="afbeelding">
                 @foreach($afbeeldingen as $afbeelding)
                     <option value="{{$afbeelding->image}}">{{$afbeelding->image}}</option>
                 @endforeach
@@ -34,28 +34,26 @@ Voeg huisdier toe
 
         <section class="create-form__section">
             <label for="wanneer">Wanneer</label>
-            <textarea class="create-form__input" name="wanneer" id="wanneer" type="text" ></textarea>
+            <input class="create-form__input" name="wanneer" id="wanneer" type="text" placeholder="vb. 1 januari" required></input>
         </section>
         
         <section class="create-form__section">
-            <label for="uurtarief">Uurtarief</label>
-            <textarea class="create-form__input" name="uurtarief" id="uurtarief" type="text" ></textarea>
+            <label for="uurtarief">Uurtarief (in euro's)</label>
+            <input class="create-form__input create-form__input--number" name="uurtarief" id="uurtarief" type="number" placeholder="vb. 10" value="0" required></input>
         </section>
 
         <section class="create-form__section">
-            <label for="hoelang">Hoelang (dagen)</label>
-            <textarea class="create-form__input" name="hoelang" id="hoelang" type="number" ></textarea>
+            <label for="hoelang">Hoelang (in dagen)</label>
+            <input class="create-form__input create-form__input--number" name="hoelang" id="hoelang" type="number" value="0" required></input>
         </section>
 
         <section class="create-form__section">
             <label for="beschrijving">Beschrijving</label>
             <textarea class="create-form__input create-form__input--big" name="beschrijving" id="beschrijving" type="text-area" ></textarea>
-        </section>
-
-        
+        </section>        
 
         <section class="create-form__section">
-            <button class="create-form__button" type="submit">Huisdier aanmaken</button>
+            <button class="create-form__button" type="submit">Huisdier toevoegen</button>
         </section>
 
     </form>

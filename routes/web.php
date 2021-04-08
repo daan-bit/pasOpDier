@@ -26,6 +26,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store']);
 
     Route::get('/profielen/{id}', [App\Http\Controllers\ProfielController::class, 'show']);
+    Route::get('/profielen', [App\Http\Controllers\ProfielController::class, 'index']);
 });
 
 Route::get('/', [App\Http\Controllers\HuisdierController::class, 'index']);

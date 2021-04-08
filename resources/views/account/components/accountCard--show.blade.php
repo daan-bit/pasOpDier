@@ -5,7 +5,7 @@
      <section class="huisdierCard__text">
           <h2 class="huisdierCard__subtitel">Beschrijving</h2>
           <p class="huisdierCard__eigenschap huisdierCard__eigenschap--beschrijving">{{$orderAanvraag->bericht}}</p>
-          <a href="/profielen/{{$oppasser->id}}"<p class="huisdierCard__eigenschap huisdierCard__eigenschap--beschrijving">Bekijk profiel van <b>{{$oppasser->name}}</b></p></a>
+          <a href="/profielen/{{$oppasser->id}}" class="huisdierCard__eigenschap huisdierCard__eigenschap--beschrijving">Bekijk profiel van <b>{{$oppasser->name}}</b></p></a>
 
      </section>
 
