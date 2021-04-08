@@ -14,7 +14,7 @@ class ProfielController extends Controller
 
     public function show($id){   
         return view('profiel.show',[
-            'profiel' => \App\Models\Profiel::where('user_id', '=', $id),
+            'profiel' => \App\Models\Profiel::find($id),
             'profielEigenaar' => \App\Models\Profiel::find($id)->profielEigenaar,
         ]);
     }

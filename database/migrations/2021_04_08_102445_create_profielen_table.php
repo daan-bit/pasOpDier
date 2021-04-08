@@ -18,8 +18,11 @@ class CreateProfielenTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('foto_woonkamer')->default('/img/profielFotos/default_foto_woonkamer.jpg');
+            $table->string('beschrijving_woonkamer')->default("Er is geen beschrijving beschikbaar");
             $table->string('foto_keuken')->default('/img/profielFotos/default_foto_keuken.jpg');
+            $table->string('beschrijving_keuken')->default("Er is geen beschrijving beschikbaar");
             $table->string('foto_huis')->default('/img/profielFotos/default_foto_huis.jpg');
+            $table->string('beschrijving_huis')->default("Er is geen beschrijving beschikbaar");
         });
     }
 

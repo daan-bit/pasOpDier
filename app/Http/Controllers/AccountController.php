@@ -17,7 +17,7 @@ class AccountController extends Controller
                 'oppasser' => $order->infoOppasser,
             ]);
         }catch(Exception $e){
-            return redirect('/huisdieren');
+            return redirect('/error');
         }
         
     }

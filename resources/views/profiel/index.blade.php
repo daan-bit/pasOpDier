@@ -1,9 +1,5 @@
 @extends('default')
 
-@section('script')
-<script src="/js/main.js" defer></script>
-@endsection
-
 @section('title')
     Huisdieren
 @endsection

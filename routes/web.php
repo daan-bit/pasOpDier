@@ -19,7 +19,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('huisdieren/create', [App\Http\Controllers\HuisdierController::class, 'create']);
     Route::post('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'store']);
 
-    Route::get('/orders/{id}/create', [App\Http\Controllers\OrderController::class, 'create']);
+    Route::get('/huisdieren/{id}/orders/create', [App\Http\Controllers\OrderController::class, 'create']);
     Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']); 
 
     Route::get('/reviews/create', [App\Http\Controllers\ReviewController::class, 'create']);
@@ -27,7 +27,14 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/profielen/{id}', [App\Http\Controllers\ProfielController::class, 'show']);
     Route::get('/profielen', [App\Http\Controllers\ProfielController::class, 'index']);
+
+    Route::get('/error', [App\Http\Controllers\ErrorController::class, 'show']);
 });
+
+Route::middleware(['auth'])->group(function(){
+
+});
+
 
 Route::get('/', [App\Http\Controllers\HuisdierController::class, 'index']);
 Route::get('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'index']);
