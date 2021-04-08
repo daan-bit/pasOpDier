@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             HuisdierTableSeeder::class,
             OrdersTableSeeder::class,
             ReviewsTableSeeder::class,    
-            ProfielenTableSeeder::class,   
+            ProfielenTableSeeder::class,  
+            RolesTableSeeder::class, 
         ]);
     }
 }

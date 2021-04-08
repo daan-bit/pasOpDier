@@ -12,8 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['auth', 'admin'])->group(function(){
+    Route::delete('/huisdieren/{id}', [App\Http\Controllers\HuisdierController::class, 'destroy']);
 
-Route::middleware(['auth'])->group(function(){
+    Route::patch('/users/{id}', [App\Http\Controllers\UsersController::class, 'update']);
+});
+
+Route::middleware(['auth', 'gast'])->group(function(){
     Route::get('/account', [App\Http\Controllers\AccountController::class, 'show']);
 
     Route::get('huisdieren/create', [App\Http\Controllers\HuisdierController::class, 'create']);
@@ -30,11 +35,6 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/error', [App\Http\Controllers\ErrorController::class, 'show']);
 });
-
-Route::middleware(['auth'])->group(function(){
-
-});
-
 
 Route::get('/', [App\Http\Controllers\HuisdierController::class, 'index']);
 Route::get('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'index']);
