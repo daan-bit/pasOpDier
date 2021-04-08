@@ -22,7 +22,7 @@ class ReviewController extends Controller
 
         try{
             $review->save();
-            return redirect('/');
+            return redirect('/orders/{id}');
         }catch(Exception $e){
             return redirect('/reviews/{id}/create');
         }

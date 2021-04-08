@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table ->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table ->unsignedBigInteger('huisdier_id');
-            $table->foreign('huisdier_id')->references('id')->on('huisdier');
+            $table->foreign('huisdier_id')->references('id')->on('huisdier')->onDelete('cascade');
             $table ->unsignedBigInteger('oppasser_id');
             $table->foreign('oppasser_id')->references('id')->on('users');
         });

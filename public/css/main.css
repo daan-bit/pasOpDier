@@ -209,18 +209,253 @@ body{
 
 }
 
-/* show pagina */
+/* verwijdercard admin */
+.verwijderCard{
+    grid-column: span 4;
+    width: 100%;
+    height: 65rem;
+    box-shadow: 0 0.5rem 2rem black;
+}
+
+.verwijderCard__a{
+    text-decoration: none;
+}
+
+.verwijderCard__article{
+    width: 100%;
+    height: 100%;
+}
+
+.verwijderCard__header{
+    width: 100%;
+    height: 10%;
+}
+
+.verwijderCard__heading{
+    margin: 2rem auto 0.5rem 2rem;   
+    color:#eeeeee;
+}
+
+.verwijderCard__figure{
+    width:100%;
+    height:45%;
+}
+
+.verwijderCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verwijderCard__textSection{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding:2rem;
+}
+
+.verwijderCard__text{
+    color: #eeeeee;
+    margin-left: 0;
+}
+
+.verwijderCard__subtitel{
+    color: #eeeeee;
+    margin-top: 2rem;
+}
+
+
+/* show pagina account */
+.accountHeader{
+    width:100%;
+    height:7.5rem;
+    background-color: #118ab2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-rows: repeat(1, minmax(0,1fr));
+}
+
+.accountHeader__titel{
+    color: #eeeeee;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin: auto;
+}
+
+.accountHeader__pagina{
+    margin: auto auto auto 2rem;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.accountHeader__button{
+    padding: 1rem 3rem;
+    font-size: 120%;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 0.3rem solid #073B4C;
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+@media(max-width: 56.25rem){
+    .accountHeader__titel{
+        font-size:160%;
+    }
+}
+
+@media(max-width: 43.75rem){
+    .accountHeader{
+        grid-template-rows: repeat(2, minmax(0,1fr));
+        grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+    .accountHeader__titel{
+        font-size: 200%;
+        grid-column: 1 / span 1;
+    }
+    .accountHeader__pagina{
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+        margin: auto;
+    }
+    .accountHeader{
+        height:15rem;
+    }
+}
+
+.accountHeader__button:hover{
+    background-color: #3cc1ec;
+    transition: 1s all;
+    color: black;
+}
+
+.accountCard{
+    width: 55%;
+    height:auto;
+    margin: 2rem auto 2rem auto;  
+    box-shadow: 0 0.2rem 0.5rem black; 
+    padding-bottom: 2rem; 
+}
+
+.accountCard__figure{
+    width: 100%;
+    height: 40rem;
+}
+
+.accountCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accountCard__subtitel{
+    padding-top: 1rem;
+    font-size: 180%;
+}
+
+.accountCard__textsection{
+    padding: 2rem 1rem 0 2rem;
+    color: #eeeeee;
+}
+
+.accountCard__text--berichtOppasser{
+    margin-bottom: 2rem;
+}
+
+.accountCard__text{
+    font-size:120%;
+}
+
+.accountCard__btnSection{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;  
+    gap:2rem; 
+}
+
+.buttonCard__link{
+    height: auto;
+    width: auto;
+}
+
+.accountCard__button{
+    font-size: 120%;
+    width:100%;
+    height: 100%;
+    padding: 2rem 6rem;
+    box-sizing: border-box;
+    background-color: #30b293;
+    border:none;
+    color: #eeeeee;
+    transition: 0.2s all;
+}
+
+.accountCard__button--weigeren{
+    background-color:transparent;
+    border: 0.3rem solid #A53E33;
+}
+
+.accountCard__button:hover{
+    cursor: pointer;
+    background-color: #55d1b4;
+    transition: 1s all;
+    color: black;
+}
+
+.accountCard__button--weigeren:hover{
+    background-color: #ca5e52;
+}
+
+.accountCard__back_to_home{
+    display: block;
+    margin: auto auto auto 2rem;
+    color:#eeeeee;
+}
+
+@media(max-width: 59.375rem){
+    .accountCard{
+        width:65%;
+    }
+
+    .accountCard__btnSection{
+        flex-direction: column;
+        margin:1.5rem auto 1.5rem auto;
+        padding:1rem;
+    }
+}
+
+@media(max-width: 40.625rem){
+    .accountCard{
+        width:80%;
+    }
+}
+
+@media(max-width:37.5rem){
+    .accountCard{
+        width:35rem;
+    }
+}
+
+@media(max-width:25rem){
+    .accountCard{
+        width:30rem;
+    }
+    .accountCard__text{
+        padding-right: 1rem;
+    }
+}
+
+/* huisdier show */
 .huisdierCard{
     width: 55%;
     height:auto;
     margin: 2rem auto 2rem auto;  
     box-shadow: 0 0.2rem 0.5rem black;  
-}
-
-@media(max-width:37.5rem){
-    .huisdierCard{
-        width:35rem;
-    }
+    color:white;
 }
 
 .huisdierCard__figure{
@@ -234,33 +469,34 @@ body{
     object-fit: cover;
 }
 
+.huisdierCard__subtitel{
+    padding-top: 1rem;
+    font-size: 180%;
+}
+
 .huisdierCard__text{
     padding: 2rem 1rem 0 2rem;
     color: #eeeeee;
 }
 
-@media(max-width:25rem){
-    .huisdierCard{
-        width:30rem;
-    }
-    .huisdierCard__text{
-        padding-right: 1rem;
-    }
-}
-
-.huisdierCard__subtitel{
-    padding-top: 2rem;
-    font-size: 150%;
+.huisdierCard__text{
+    font-size:110%;
 }
 
 .huisdierCard__btnSection{
-    padding: 2rem 0 2rem 2rem;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: left;  
+    flex-direction: column;
+    gap:2rem; 
 }
 
 .huisdierCard__button{
     font-size: 120%;
-    width:25rem;
-    height: 6rem;
+    padding: 2rem 6rem;
     box-sizing: border-box;
     background-color: #118AB2;
     border:none;
@@ -277,13 +513,40 @@ body{
 
 .huisdierCard__back_to_home{
     display: block;
-    margin-top: 2rem;
     color:#eeeeee;
 }
 
-@media(max-width: 37.5rem){
-    .huisdierCard__button{
-        width: 17rem;
+@media(max-width: 59.375rem){
+    .huisdierCard{
+        width:65%;
+    }
+
+    .huisdierCard__btnSection{
+        flex-direction: column;
+        margin:1.5rem auto 1.5rem auto;
+        padding:1rem;
+    }
+}
+
+@media(max-width: 40.625rem){
+    .huisdierCard{
+        width:80%;
+    }
+}
+
+@media(max-width:37.5rem){
+    .huisdierCard{
+        width:35rem;
+    }
+}
+
+
+@media(max-width:25rem){
+    .huisdierCard{
+        width:30rem;
+    }
+    .huisdierCard__text{
+        padding-right: 1rem;
     }
 }
 
@@ -293,9 +556,15 @@ body{
     width: 55%;
     margin:2rem auto 2rem auto;
     box-shadow: 0 0.5rem 2rem black;
-    /* min-height: 70vh; */
     display: flex;
     color: #eeeeee;
+    align-items: left;
+    flex-direction: column;
+}
+
+.create-form__titel{
+    width: 90%;
+    margin: 2rem auto auto auto;
 }
 
 .create-form__form{
@@ -304,8 +573,8 @@ body{
 }
 
 .create-form__section{
-    margin-top: 4rem;
-    font-size: 140%;
+    margin-top: 3rem;
+    font-size: 120%;
     width: 100%;
 }
 
@@ -335,6 +604,10 @@ body{
     height: 15rem;
 }
 
+.create-form__input--big--bericht{
+    width:55%;
+}
+
 .create-form__button{
     font-size: 110%;
     width:auto;
@@ -356,9 +629,37 @@ body{
     color: black;
 }
 
+@media(max-width: 87.5rem){
+    .create-form__input--big--bericht{
+        width:80%;
+    }
+}
+
 @media(max-width: 62.5rem){
     .create-form{
         width:90%;
+    }
+    .create-form--bericht{
+        width:65%;
+    }
+}
+
+@media(max-width: 50rem){
+    .create-form--bericht{
+        width:85%;
+    }
+}
+
+@media(max-width: 37.5rem){
+    .create-form--bericht{
+        width:85%;
+    }
+
+    .create-form__input--big--bericht{
+        width: 100%;
+    }
+    .create-form__section--bericht{
+        width: 100%;
     }
 }
 

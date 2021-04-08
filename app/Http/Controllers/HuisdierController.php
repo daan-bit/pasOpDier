@@ -45,4 +45,13 @@ class HuisdierController extends Controller
             return redirect('/huisdieren/create');
         }
     }
+
+    public function destroy($id) {
+        $huisdier = \App\Models\Huisdier::find($id);
+
+        $huisdier->delete();
+        return redirect('/admin');      
+    }
 }
+
+

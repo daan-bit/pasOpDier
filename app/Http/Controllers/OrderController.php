@@ -26,4 +26,11 @@ class OrderController extends Controller
             return redirect('/orders/{id}/create');
         }
     }
+
+    public function destroy($id) {
+        $order = \App\Models\Order::find($id);
+
+        $order->delete();
+        return redirect('/');       
+    }
 }

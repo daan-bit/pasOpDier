@@ -21,7 +21,7 @@ class CreateReviewsTable extends Migration
             $table ->unsignedBigInteger('huisdier_id');
             $table->foreign('huisdier_id')->references('id')->on('huisdier');
             $table ->unsignedBigInteger('order_id');
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
 
         });
     }

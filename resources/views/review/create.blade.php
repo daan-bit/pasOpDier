@@ -6,14 +6,14 @@ Schrijf een review
 @endsection
 
 @section('content')
-<article class="create-form a-popup">
-    <form class="create-form__form" action="/reviews" method="POST">
+<article class="create-form create-form--bericht a-popup">
+    <form class="create-form__form create-form__form--bericht" action="/reviews" method="POST">
         @csrf
-        <p>Schrijf een review voor de oppas van {{$huisdier->naam}}</p>
+        <h2 class="create-form__titel">Schrijf een review voor de oppas van {{$huisdier->naam}}</h2>
 
-        <section class="create-form__section">
+        <section class="create-form__section create-form__section--bericht">
             <label for="review">review</label>
-            <textarea class="create-form__input create-form__input--big" name="review" id="review" type="text-area" ></textarea>
+            <textarea class="create-form__input create-form__input--big create-form__input--big--bericht" name="review" id="review" type="text-area" ></textarea>
         </section>
 
         <input class="create-form__input create-form__input--big" name="huisdier_id" id="huisdier_id" type="hidden" value="{{$huisdier->id}}" ></input>
@@ -27,3 +27,7 @@ Schrijf een review
     </form>
 </article>
 @endsection
+
+
+
+

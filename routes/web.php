@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::middleware(['auth', 'admin'])->group(function(){
+    Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
     Route::delete('/huisdieren/{id}', [App\Http\Controllers\HuisdierController::class, 'destroy']);
 
+    // route:: users/patch
     Route::patch('/users/{id}', [App\Http\Controllers\UsersController::class, 'update']);
 });
 
@@ -25,7 +27,9 @@ Route::middleware(['auth', 'gast'])->group(function(){
     Route::post('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'store']);
 
     Route::get('/huisdieren/{id}/orders/create', [App\Http\Controllers\OrderController::class, 'create']);
-    Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']); 
+    Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']);
+    Route::delete('/orders/{id}', [App\Http\Controllers\OrderController::class, 'destroy']);
+
 
     Route::get('/reviews/create', [App\Http\Controllers\ReviewController::class, 'create']);
     Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store']);
@@ -47,3 +51,4 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+

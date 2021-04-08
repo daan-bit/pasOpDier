@@ -16,7 +16,7 @@ class CheckIfGast
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->role == "Gast"){
+        if(Auth::user()->role != "Ongewenst"){
             return $next($request);
         }
         return redirect('/');
