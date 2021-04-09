@@ -1,7 +1,7 @@
 <article class="errorCard a-popup">
      <section class="errorCard__text">
           <h2 class="errorCard__subtitel">Geen orders</h2>
-          <p class="errorCard__eigenschap">Hoi {{$gebruiker->name}}, het lijkt erop dat niet op je oppasverzoek heeft gereageerd :/</p>          
+          <p class="errorCard__eigenschap">Hoi {{$gebruiker->name}}, het lijkt erop dat niemand op je oppasverzoek heeft gereageerd :/</p>          
      </section>
 
     <section class="errorCard__btnSection">
