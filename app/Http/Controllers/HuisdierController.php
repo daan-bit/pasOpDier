@@ -31,6 +31,7 @@ class HuisdierController extends Controller
 
     public function store(Request $request, \App\Models\Huisdier $huisdier){
         $huisdier->naam = $request->input('naam');
+        $huisdier->image = $request->input('afbeelding');
         $huisdier->soort = $request->input('soort');
         $huisdier->wanneer = $request->input('wanneer');
         $huisdier->uurtarief = $request->input('uurtarief');
@@ -38,12 +39,10 @@ class HuisdierController extends Controller
         $huisdier->user_id = Auth::user()->id;
         $huisdier->beschrijving = $request->input('beschrijving');
 
-        try{
-            $huisdier->save();
-            return redirect('/');
-        }catch(Exception $e){
-            return redirect('/huisdieren/create');
-        }
+
+        $huisdier->save();
+        return redirect('/');
+
     }
 
     public function destroy($id) {

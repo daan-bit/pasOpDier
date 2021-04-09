@@ -14,10 +14,11 @@ class ReviewsTableSeeder extends Seeder
     public function run()
     {
         DB::table('reviews')->insert([
-            'review' => "Het was er gezellig, gauw nog een keer",
+            'review' => "Bedankt voor de super oppas, Max is weer helemaal vrolijk",
             'user_id' => "1",
             'huisdier_id' => "1",
             'order_id' => "1",
+            'oppasser_id' => "2",
         ]);
     }
 }

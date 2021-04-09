@@ -13,8 +13,10 @@ Schrijf een review
 
         <section class="create-form__section create-form__section--bericht">
             <label for="review">review</label>
-            <textarea class="create-form__input create-form__input--big create-form__input--big--bericht" name="review" id="review" type="text-area" ></textarea>
+            <textarea class="create-form__input create-form__input--big create-form__input--big--bericht" name="review" id="review" type="text-area" required></textarea>
         </section>
+
+        <input class="create-form__input create-form__input--big" name="oppasser_id" id="oppasser_id" type="hidden" value="{{$order->infoOppasser->id}}" ></input>
 
         <input class="create-form__input create-form__input--big" name="huisdier_id" id="huisdier_id" type="hidden" value="{{$huisdier->id}}" ></input>
 

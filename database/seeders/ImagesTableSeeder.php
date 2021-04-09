@@ -13,11 +13,24 @@ class ImagesTableSeeder extends Seeder
      */
     public function run()
     {
-        $images_array = ['hond.jpg', 'overig.jpg', 'vis.jpg', 'vogel.jpg', 'kat.jpg'];
-        foreach($images_array as $image){
             DB::table('images')->insert([
-                'image' => '/img/' . $image
+                'image' => '/img/huisdieren/hond.jpg'
             ]);
-        }
+
+            DB::table('images')->insert([
+                'image' => '/img/huisdieren/overig.jpg'
+            ]);
+
+            DB::table('images')->insert([
+                'image' => '/img/huisdieren/vis.jpg'
+            ]);
+
+            DB::table('images')->insert([
+                'image' => '/img/huisdieren/vogel.jpg'
+            ]);
+
+            DB::table('images')->insert([
+                'image' => '/img/huisdieren/kat.jpg'
+            ]);
     }
 }

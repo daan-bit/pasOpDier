@@ -30,7 +30,7 @@ Route::middleware(['auth', 'gast'])->group(function(){
     Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']);
     Route::delete('/orders/{id}', [App\Http\Controllers\OrderController::class, 'destroy']);
 
-
+    Route::get('/reviews', [App\Http\Controllers\ReviewController::class, 'index']);
     Route::get('/reviews/create', [App\Http\Controllers\ReviewController::class, 'create']);
     Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store']);
 
@@ -40,11 +40,11 @@ Route::middleware(['auth', 'gast'])->group(function(){
     Route::get('/error', [App\Http\Controllers\ErrorController::class, 'show']);
 });
 
+
 Route::get('/', [App\Http\Controllers\HuisdierController::class, 'index']);
 Route::get('/huisdieren', [App\Http\Controllers\HuisdierController::class, 'index']);
 
 Route::get('/huisdieren/{id}', [App\Http\Controllers\HuisdierController::class, 'show']);
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');

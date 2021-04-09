@@ -52,7 +52,7 @@ body{
 
 .nav__button:hover{
     background-color: #3cc1ec;
-    transition: 1s all;
+    transition: 0.5s all;
     color: black;
 }
 
@@ -74,6 +74,10 @@ body{
     width: 100%;
     height: 65rem;
     box-shadow: 0 0.5rem 2rem black;
+}
+
+.gridCard--review{
+    height: 50rem;
 }
 
 .gridCard__a{
@@ -160,6 +164,9 @@ body{
     .gridCard{
         height: 60rem
     } 
+    .gridCard--review{
+        height: 50rem
+    }
     .gridCard--profiel{
         height: 40rem;
     }
@@ -326,7 +333,7 @@ body{
 
 .accountHeader__button:hover{
     background-color: #3cc1ec;
-    transition: 1s all;
+    transition: 0.5s all;
     color: black;
 }
 
@@ -402,7 +409,7 @@ body{
 .accountCard__button:hover{
     cursor: pointer;
     background-color: #55d1b4;
-    transition: 1s all;
+    transition: 0.5s all;
     color: black;
 }
 
@@ -475,7 +482,7 @@ body{
 }
 
 .huisdierCard__text{
-    padding: 2rem 1rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
     color: #eeeeee;
 }
 
@@ -507,7 +514,7 @@ body{
 .huisdierCard__button:hover{
     cursor: pointer;
     background-color: #3cc1ec;
-    transition: 1s all;
+    transition: 0.5s all;
     color: black;
 }
 
@@ -543,7 +550,7 @@ body{
 
 @media(max-width:25rem){
     .huisdierCard{
-        width:30rem;
+        width:35rem;
     }
     .huisdierCard__text{
         padding-right: 1rem;
@@ -625,7 +632,7 @@ body{
 .create-form__button:hover{
     cursor: pointer;
     background-color: #3cc1ec;
-    transition: 1s all;
+    transition: 0.5s all;
     color: black;
 }
 
@@ -712,7 +719,7 @@ body{
 
 .profielHeader__button:hover{
     background-color: #3cc1ec;
-    transition: 1s all;
+    transition: 0.5s all;
     color: black;
 }
 
@@ -823,7 +830,7 @@ body{
 
 .errorCard__button:hover{
     background-color: #3cc1ec;
-    transition: 1s all;
+    transition: 0.5s all;
     color: black;
 }
 

@@ -18,6 +18,8 @@ class CreateReviewsTable extends Migration
             $table->string('review');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('oppasser_id');
+            $table->foreign('oppasser_id')->references('id')->on('users');
             $table ->unsignedBigInteger('huisdier_id');
             $table->foreign('huisdier_id')->references('id')->on('huisdier');
             $table ->unsignedBigInteger('order_id');

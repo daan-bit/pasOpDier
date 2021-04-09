@@ -15,7 +15,7 @@ class HuisdierTableSeeder extends Seeder
     {
         DB::table('huisdier')->insert([
             'naam' => "Max",
-            'image' => "/img/hond.jpg",
+            'image' => "/img/huisdieren/hond.jpg",
             'soort' => 'hond',
             'wanneer' => "27 Septemeber",
             'hoelang' => "3",
@@ -26,7 +26,7 @@ class HuisdierTableSeeder extends Seeder
 
         DB::table('huisdier')->insert([
             'naam' => "Tessa",
-            'image' => "/img/kat.jpg",
+            'image' => "/img/huisdieren/kat.jpg",
             'soort' => 'kat',
             'wanneer' => "3 februari",
             'hoelang' => "7",
@@ -37,7 +37,7 @@ class HuisdierTableSeeder extends Seeder
 
         DB::table('huisdier')->insert([
             'naam' => "Arie",
-            'image' => "/img/vogel.jpg",
+            'image' => "/img/huisdieren/vogel.jpg",
             'soort' => 'vogel',
             'wanneer' => "26 februari",
             'hoelang' => "2",
@@ -48,7 +48,7 @@ class HuisdierTableSeeder extends Seeder
 
         DB::table('huisdier')->insert([
             'naam' => "Jan-Pieter",
-            'image' => "/img/vis.jpg",
+            'image' => "/img/huisdieren/vis.jpg",
             'soort' => 'vis',
             'wanneer' => "3 maart",
             'hoelang' => "1",
@@ -59,7 +59,7 @@ class HuisdierTableSeeder extends Seeder
 
         DB::table('huisdier')->insert([
             'naam' => "Youri",
-            'image' => "/img/overig.jpg",
+            'image' => "/img/huisdieren/overig.jpg",
             'soort' => 'overig',
             'wanneer' => "26 februari",
             'hoelang' => "8",
