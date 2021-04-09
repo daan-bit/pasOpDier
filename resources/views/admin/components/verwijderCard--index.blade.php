@@ -17,12 +17,15 @@
             <section class="verwijderCard__textSection">
                 <p class="verwijderCard__text">Naam: {{$huisdier->naam}}</p>
                 <p class="verwijderCard__text">Soort: {{$huisdier->soort}}</p>
+            </section>
+
+            <section class="verwijderCard__btnsection">
                 <form action="/huisdieren/{{$huisdier->id}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="verwijderCard__button">Verwijder dier</button>
-            </form> 
-            </section>
+                </form> 
+                </section>
         </article>  
     
 </li>

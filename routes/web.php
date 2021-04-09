@@ -14,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
+    
     Route::delete('/huisdieren/{id}', [App\Http\Controllers\HuisdierController::class, 'destroy']);
 
-    // route:: users/patch
-    Route::patch('/users/{id}', [App\Http\Controllers\UsersController::class, 'update']);
+    Route::get('/users/{id}/edit', [App\Http\Controllers\UserController::class, 'edit']);
+    Route::put('/users/{id}', [App\Http\Controllers\UserController::class, 'update']);
 });
 
 Route::middleware(['auth', 'gast'])->group(function(){

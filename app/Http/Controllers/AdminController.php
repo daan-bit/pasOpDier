@@ -10,6 +10,7 @@ class AdminController extends Controller
         return view('admin.index', [
             'gebruiker' => \App\Models\User::all()->where('role', '!=', 'Ongewenst'),
             'huisdier' => \App\Models\Huisdier::all(),
+            'profiel' => \App\Models\Profiel::all(),
         ]);
     }
 

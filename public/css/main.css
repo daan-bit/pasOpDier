@@ -24,6 +24,10 @@ body{
     border-bottom: 0.3rem solid #118AB2;
 }
 
+.nav--admin{
+    border-bottom: 0.3rem solid #eeeeee;
+}
+
 .nav__wrapper{
     width: 100%;
     height: 100%;
@@ -48,6 +52,10 @@ body{
     border: 0.2rem solid #118AB2;
     text-decoration: none;
     color: #eeeeee;
+}
+
+.nav__button--create{
+    background-color: #118AB2;
 }
 
 .nav__button:hover{
@@ -216,16 +224,60 @@ body{
 
 }
 
-/* verwijdercard admin */
+/* admin index pagina */
+.gridCard--admin{
+    height: 45rem;
+}
+
+.gridCard__buttonsection--wijzigen{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.gridCard__button--wijzigen{
+    padding: 1rem 4rem;
+    font-size: 125%;
+    background-color: #118AB2;
+    text-decoration: none;
+    color: #eeeeee;
+    border:none;
+}
+
+.gridCard__button--wijzigen:hover{
+    background-color: #3cc1ec;
+    transition: 0.5s all;
+    color: black;
+}
+
+.gridCard__a--wijzigen{
+    display: inline-block;
+    margin: auto;
+}
+
+.adminTussen{
+    margin: 3rem 0 3rem 0;
+    width: 100%;
+    grid-column: 1 / span 12;
+    height:7.5rem;
+    background-color: #118ab2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.adminTussen__titel{
+    color: #eeeeee;
+}
+
 .verwijderCard{
     grid-column: span 4;
     width: 100%;
-    height: 65rem;
+    height: 45rem;
     box-shadow: 0 0.5rem 2rem black;
-}
-
-.verwijderCard__a{
-    text-decoration: none;
 }
 
 .verwijderCard__article{
@@ -256,10 +308,11 @@ body{
 
 .verwijderCard__textSection{
     width: 100%;
-    height: 40%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     padding:2rem;
+    font-size: 130%;
 }
 
 .verwijderCard__text{
@@ -267,11 +320,130 @@ body{
     margin-left: 0;
 }
 
-.verwijderCard__subtitel{
-    color: #eeeeee;
-    margin-top: 2rem;
+.verwijderCard__btnsection{
+    width: 100%;
+    height:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
+.verwijderCard__button{
+    padding: 1rem 4rem;
+    font-size: 125%;
+    border: none;
+    color: white;
+    text-decoration: none;
+    background-color:#A53E33;
+    transition: 0.5s all;
+}
+
+.verwijderCard__button:hover{
+    background-color: #ca5e52;
+}
+
+
+@media(max-width: 56.25rem){
+    .verwijderCard{
+        grid-column: span 6;
+    } 
+    .verwijderCard__figure{
+        height:40%;
+    }   
+}
+
+@media(max-width: 43.75rem){
+    .adminTussen{
+        grid-template-rows: repeat(1, minmax(0,1fr));
+        height: 7.5rem;
+    }
+    .adminTussen__titel{
+        font-size: 200%;
+    }
+}
+
+@media(max-width: 32.5rem){
+    .verwijderCard{
+        grid-column: span 12;
+    }
+}
+
+/* blokkeer pagina */
+.create-formBlokkeer{
+    width: 55%;
+    margin:2rem auto 2rem auto;
+    box-shadow: 0 0.5rem 2rem black;
+    display: flex;
+    color: #eeeeee;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.create-formBlokkeer__form{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.create-formBlokkeer__section{
+    margin-top: 3rem;
+    font-size: 120%;
+    width: 100%;
+}
+
+.create-formBlokkeer__label{
+    font-size:150%;
+}
+
+.create-formBlokkeer__input{
+    display: block;
+    margin-top:1rem;
+    width: 40%;
+    font-size: 100%;
+    font-weight: 400;
+    padding:0.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.create-formBlokkeer__btnsection{
+    width: 100%;
+    margin: 3rem auto 3rem auto;
+}
+
+.create-formBlokkeer__button{
+    padding: 1rem 4rem;
+    font-size: 125%;
+    background-color: #118AB2;
+    text-decoration: none;
+    color: #eeeeee;
+    border:none;
+}
+
+.create-formBlokkeer__button:hover{
+    background-color: #3cc1ec;
+    transition: 0.5s all;
+    color: black;
+}
+
+
+@media(max-width: 62.5rem){
+    .create-formBlokkeer__input{
+        width:65%;
+    }
+}
+
+@media(max-width: 43.75rem){
+    .create-formBlokkeer{
+        width:75%;
+    }
+}
+
+@media(max-width: 31.25rem){
+    .create-formBlokkeer{
+        width:85%;
+    }
+}
 
 /* show pagina account */
 .accountHeader{
@@ -547,7 +719,6 @@ body{
     }
 }
 
-
 @media(max-width:25rem){
     .huisdierCard{
         width:35rem;
@@ -572,6 +743,10 @@ body{
 .create-form__titel{
     width: 90%;
     margin: 2rem auto auto auto;
+}
+
+.create-form__titel--review{
+    margin: 2rem auto auto 0;
 }
 
 .create-form__form{

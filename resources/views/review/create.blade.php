@@ -6,10 +6,11 @@ Schrijf een review
 @endsection
 
 @section('content')
+@include('review.components.reviewHeader--create')
 <article class="create-form create-form--bericht a-popup">
     <form class="create-form__form create-form__form--bericht" action="/reviews" method="POST">
         @csrf
-        <h2 class="create-form__titel">Schrijf een review voor de oppas van {{$huisdier->naam}}</h2>
+        <h2 class="create-form__titel create-form__titel--review">Schrijf een review voor de oppas van {{$huisdier->naam}}</h2>
 
         <section class="create-form__section create-form__section--bericht">
             <label for="review">review</label>
