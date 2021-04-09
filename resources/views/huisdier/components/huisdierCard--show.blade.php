@@ -1,6 +1,13 @@
 <article class="huisdierCard a-popup">
      <figure class="huisdierCard__figure">
-     <img class="huisdierCard__image" src="{{$huisdier->image}}"  alt="{{$huisdier->naam . ' ' . $huisdier->soort}}"/>
+     <img class="gridCard__image" 
+                    srcset="
+                    {{$huisdier->image640}} 640w,
+                    {{$huisdier->image1280}} 1280w,
+                    {{$huisdier->image1920}} 1920w
+                    "
+                    sizes="(min-width: 1500px) 1920px, (min-width: 1000px) 1280px, 640px"
+                         src="{{$huisdier->image}}" alt="foto van {{$huisdier->soort}} {{$huisdier->naam}}"/>
      </figure>
      <section class="huisdierCard__text">
           <p>Hoi, ik ben <b>{{$huisdier->naam}}</b> en ik ben een {{$huisdier->soort}}.</p>

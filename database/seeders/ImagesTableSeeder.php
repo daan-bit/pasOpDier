@@ -14,23 +14,38 @@ class ImagesTableSeeder extends Seeder
     public function run()
     {
             DB::table('images')->insert([
-                'image' => '/img/huisdieren/hond.jpg'
+                'image' => '/img/huisdieren/hond.jpg',
+                'image640' => '/img/huisdieren/hond640.webp',
+                'image1280' => '/img/huisdieren/hond1280.webp',
+                'image1920' => '/img/huisdieren/hond1920.webp',
             ]);
 
             DB::table('images')->insert([
-                'image' => '/img/huisdieren/overig.jpg'
+                'image' => '/img/huisdieren/overig.jpg',
+                'image640' => '/img/huisdieren/overig640.webp',
+                'image1280' => '/img/huisdieren/overig1280.webp',
+                'image1920' => '/img/huisdieren/overig1920.webp',
             ]);
 
             DB::table('images')->insert([
-                'image' => '/img/huisdieren/vis.jpg'
+                'image' => '/img/huisdieren/vis.jpg',
+                'image640' => '/img/huisdieren/vis640.webp',
+                'image1280' => '/img/huisdieren/vis1280.webp',
+                'image1920' => '/img/huisdieren/vis1920.webp',
             ]);
 
             DB::table('images')->insert([
-                'image' => '/img/huisdieren/vogel.jpg'
+                'image' => '/img/huisdieren/vogel.jpg',
+                'image640' => '/img/huisdieren/vogel640.webp',
+                'image1280' => '/img/huisdieren/vogel1280.webp',
+                'image1920' => '/img/huisdieren/vogel1920.webp',
             ]);
 
             DB::table('images')->insert([
-                'image' => '/img/huisdieren/kat.jpg'
+                'image' => '/img/huisdieren/kat.jpg',
+                'image640' => '/img/huisdieren/kat640.webp',
+                'image1280' => '/img/huisdieren/kat1280.webp',
+                'image1920' => '/img/huisdieren/kat1920.webp',
             ]);
     }
 }

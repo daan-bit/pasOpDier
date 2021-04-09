@@ -32,6 +32,9 @@ class HuisdierController extends Controller
     public function store(Request $request, \App\Models\Huisdier $huisdier){
         $huisdier->naam = $request->input('naam');
         $huisdier->image = $request->input('afbeelding');
+        $huisdier->image640 = $request->input('afbeelding');
+        $huisdier->image1280 = $request->input('afbeelding');
+        $huisdier->image1920 = $request->input('afbeelding');
         $huisdier->soort = $request->input('soort');
         $huisdier->wanneer = $request->input('wanneer');
         $huisdier->uurtarief = $request->input('uurtarief');

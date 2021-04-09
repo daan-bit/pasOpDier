@@ -1,6 +1,13 @@
 <article class="accountCard a-popup">
      <figure class="accountCard__figure">
-        <img class="accountCard__image" src="{{$huisdier->image}}"  alt="{{$huisdier->naam . ' ' . $huisdier->soort}}"/>
+     <img class="accountCard__image" 
+                    srcset="
+                    {{$huisdier->image640}} 640w,
+                    {{$huisdier->image1280}} 1280w,
+                    {{$huisdier->image1920}} 1920w
+                    "
+                    sizes="(min-width: 1500px) 1920px, (min-width: 1000px) 1280px, 640px"
+                         src="{{$huisdier->image}}" alt="Foto van {{$huisdier->naam . ' ' . $huisdier->soort}}"/>
      </figure>
      <section class="accountCard__textsection">
           <h2 class="accountCard__subtitel">Bericht oppasser</h2>

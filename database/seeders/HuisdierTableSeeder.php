@@ -16,6 +16,9 @@ class HuisdierTableSeeder extends Seeder
         DB::table('huisdier')->insert([
             'naam' => "Max",
             'image' => "/img/huisdieren/hond.jpg",
+            'image640' => "/img/huisdieren/hond640.webp",
+            'image1280' => "/img/huisdieren/hond1280.webp",
+            'image1920' => "/img/huisdieren/hond1920.webp",
             'soort' => 'hond',
             'wanneer' => "27 Septemeber",
             'hoelang' => "3",
@@ -27,6 +30,9 @@ class HuisdierTableSeeder extends Seeder
         DB::table('huisdier')->insert([
             'naam' => "Tessa",
             'image' => "/img/huisdieren/kat.jpg",
+            'image640' => "/img/huisdieren/kat640.webp",
+            'image1280' => "/img/huisdieren/kat1280.webp",
+            'image1920' => "/img/huisdieren/kat1920.webp",
             'soort' => 'kat',
             'wanneer' => "3 februari",
             'hoelang' => "7",
@@ -38,6 +44,9 @@ class HuisdierTableSeeder extends Seeder
         DB::table('huisdier')->insert([
             'naam' => "Arie",
             'image' => "/img/huisdieren/vogel.jpg",
+            'image640' => "/img/huisdieren/vogel640.webp",
+            'image1280' => "/img/huisdieren/vogel1280.webp",
+            'image1920' => "/img/huisdieren/vogel1920.webp",
             'soort' => 'vogel',
             'wanneer' => "26 februari",
             'hoelang' => "2",
@@ -49,6 +58,9 @@ class HuisdierTableSeeder extends Seeder
         DB::table('huisdier')->insert([
             'naam' => "Jan-Pieter",
             'image' => "/img/huisdieren/vis.jpg",
+            'image640' => "/img/huisdieren/vogel640.webp",
+            'image1280' => "/img/huisdieren/vis1280.webp",
+            'image1920' => "/img/huisdieren/vis1920.webp",
             'soort' => 'vis',
             'wanneer' => "3 maart",
             'hoelang' => "1",
@@ -60,6 +72,9 @@ class HuisdierTableSeeder extends Seeder
         DB::table('huisdier')->insert([
             'naam' => "Youri",
             'image' => "/img/huisdieren/overig.jpg",
+            'image640' => "/img/huisdieren/overig640.webp",
+            'image1280' => "/img/huisdieren/overig1280.webp",
+            'image1920' => "/img/huisdieren/overig1920.webp",
             'soort' => 'overig',
             'wanneer' => "26 februari",
             'hoelang' => "8",

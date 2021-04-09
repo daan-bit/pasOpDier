@@ -18,6 +18,9 @@ class CreateHuisdierTable extends Migration
             $table->string('naam');
             $table->string('soort')->default('Onbekend');
             $table->string('image')->default('/img/overig.jpg');
+            $table->string('image640')->default('/img/overig640.webp');
+            $table->string('image1280')->default('/img/overig1280.webp');
+            $table->string('image1920')->default('/img/overig1920.webp');
             $table->string('wanneer');
             $table->float('uurtarief');
             $table->integer('hoelang');
